@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Social : post page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Poppins:wght@300;400;600&family=Rubik+Beastly&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/post.css">
+</head>
+<body>
+
+   <!--navbar--> 
+   <nav class="navbar">
+       <img src="../images/go-social-logo--new.png" class="logo" alt="">
+       <form class="search-box">
+           <input type="text" placeholder="search" name="search-query" id="search-input">
+
+           <button class="search-btn" type="submit"><img src="../images/search.png" class="search-icon" alt=""></button>
+       </form>
+
+       <div class="nav-links">
+           <a href="#" class="nav-links"><img src="../images/home-nofill.png" class="nav-icon" alt=""></a>
+
+           <div class="activity-log ">
+            <img src="../images/heart-nofill.png" class="nav-icon" alt="">
+            <div class="activity-container hide">
+                <div class="activity-card">
+                    <img src="../images/Profile_picture.jpg" class="user-img" alt="" >
+                    <p class="activity"><b>@Liza</b> liked your post</p>
+                    <img src="../images/post1.jpg" class="activity-post" alt=""> 
+                </div>
+
+                <div class="activity-card">
+                    <img src="../images/user2.jpg" class="user-img" alt="" >
+                    <p class="activity"><b>@Ron</b> liked your post</p>
+                    <img src="../images/post3.jpg" class="activity-post" alt=""> 
+                </div>
+
+                <div class="activity-card">
+                    <img src="../images/user3.jpg" class="user-img" alt="" >
+                    <p class="activity"><b>@Nora</b> liked your post</p>
+                    <img src="../images/post3.jpg" class="activity-post" alt=""> 
+                </div>
+
+                <div class="activity-card">
+                    <img src="../images/user4.jpg" class="user-img" alt="" >
+                    <p class="activity"><b>@Micheal</b> liked your post</p>
+                    <img src="../images/post4.jpg" class="activity-post" alt=""> 
+                </div>
+
+            </div>
+           </div>
+          
+           <a href="#" class="nav-links"><img src="../images/add-nofill.png" 
+           class="nav-icon" alt=""></a>
+           <a href="#" class="nav-links"><img src="../images/profile-logo.png" 
+           class="nav-icon user-profile" alt=""></a> 
+       </div>
+   </nav>
+
+   <div class="post">
+    
+      <div class="post-feed">
+        <div class="post-overlays">
+            <img src="../images/red-heart.png" class="like-icon" alt="">
+
+            <div class="share-window">
+                <h1 class="title">Share the post with others</h1>
+                <div class="share-link-container">
+                    <input type="text" id="share-link" value="https://www.gosocial.com/post/234234234234" disabled>
+                    <button class="copy-btn">copy</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="post-img-container">
+            <img src="../images/post4.jpg" alt="">
+            <img src="../images/post3.jpg" alt="">
+            <img src="../images/post5.jpg" alt="">
+            <img src="../images/post1.jpg" alt="">
+            <img src="../images/post8.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="post-header">
+            <img src="../images/user1.jpg" class="user-icon" alt="">
+            <p class="username">@Shrishti</p>
+        </div>
+        <div class="post-detail">
+            <div class="detail-intracables">
+                <img src="../images/heart-nofill.png" class="like-btn" alt="">
+                <img src="../images/send-nofill.png" class="send-btn" alt="">
+                <img src="../images/comment-nofill.png" class="comment-btn" alt="">
+            </div>
+            <span class="Likes">3.2k likes</span>
+            <p class="username">@Shrishti</p>
+            <p class="post-des">Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything</p>
+    
+            <div class="comments-container">
+                <div class="comment-card">
+                    <img src="../images/user3.jpg" class="user-dp" alt="">
+                    <div class="comment-body">
+                        <span class="username">@Nora</span>
+                        <p class="comment">This is amazing</p>
+                    </div>
+                </div>                
+                <div class="comment-card">
+                    <img src="../images/user4.jpg" class="user-dp" alt="">
+                    <div class="comment-body">
+                        <span class="username">@Micheal</span>
+                        <p class="comment">what a perfect shot</p>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <img src="../images/user5.jpg" class="user-dp" alt="">
+                    <div class="comment-body">
+                        <span class="username">@Miley</span>
+                        <p class="comment">Woww</p>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <img src="../images/user6.jpg" class="user-dp" alt="">
+                    <div class="comment-body">
+                        <span class="username">@Kunal</span>
+                        <p class="comment">Nice Photography</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="comment-box">
+                <input type="text" id="comment-input" placeholder="Add a comment">
+                <button class="add-comment-btn">
+                    <img src="../images/comment-nofill.png" alt="">
+                </button>
+            </div>
+    
+           
+        </div>
+      </div>
+    
+   </div> 
+  
+
+   <script src="post.js"></script>
+
+</body>
+</html>
