@@ -16,46 +16,43 @@ const changeIcon = (icon) => {
     }
 }
 
+//post like
+
 const addInteractionsToPost = (post) => {
+    let likeBtn = post.querySelector('.like-btn');
+    let likeImg = post.querySelector('.like-icon');
 
-    //post Like
-
-let likeBtn = post.querySelector('.like-btn');
-let likeImg = post.querySelector('.like-icon');
-
-likeBtn.addEventListener('click', () => {
-    if(likeBtn.src.includes('nofill')){
-        likeImg.classList.add('show');
-        if(shareBtn.src.includes('-fill')){
-            shareBtn.click();
+    likeBtn.addEventListener('click', () => {
+        if(likeBtn.src.includes('nofill')){
+            likeImg.classList.add('show');
+            if(shareBtn.src.includes('-fill')){
+                shareBtn.click();
+            }
         }
-    }
-    changeIcon(likeBtn);
+        changeIcon(likeBtn);
 
-    setTimeout(() => {
-        likeImg.classList.remove('show');
-    }, 3000);
-
-})
-
-//post share
-let shareBtn = post.querySelector('.send-btn');
-let shareWindow = post.querySelector('.share-window');
-
-shareBtn.addEventListener('click', () => {
-    shareWindow.classList.toggle('active');
-    changeIcon(shareBtn)
-})
-
-let postLink = post.querySelector('#share-link').value;
-let copyLinkBtn = post.querySelector('.copy-btn');
-
-copyLinkBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText(postLink).then(() => {
-        shareBtn.click();
+        setTimeout(() => {
+            likeImg.classList.remove('show');
+        }, 3000);
     })
-})
 
+    //post share
+    let shareBtn = post.querySelector('.send-btn');
+    let shareWindow = post.querySelector('.share-window');
+
+    shareBtn.addEventListener('click', () => {
+        shareWindow.classList.toggle('active');
+        changeIcon(shareBtn)
+    })
+
+    let postLink = post.querySelector('#share-link').value;
+    let copyLinkBtn = post.querySelector('.copy-btn');
+
+    copyLinkBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(postLink).then(() => {
+            shareBtn.click();
+        })
+    })
 }
 
 //post

@@ -106,3 +106,69 @@ body{
 .likes .likes-count{
     color: #fff;
 }
+
+.suggestion-slider{
+    width: 100%;
+    position: relative;
+}
+
+.suggestion-container{
+    position: relative;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+/*webkit-scrollbar for hiding scrollbar*/
+.suggestion-container::-webkit-scrollbar{
+    display: none;
+}
+
+.nxt-arrow, .pre-arrow{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nxt-arrow{
+    right: -50px;
+}
+
+.pre-arrow{
+    left: -50px;
+    transform: rotate(180deg);
+}
+
+.post-popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.post-popup.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.close-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.post-popup .post{
+    border: none;
+    height: 80vh;
+}
